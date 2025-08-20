@@ -1,0 +1,65 @@
+@use 'mixins' as *;
+
+.header {
+  // display: flex;
+  
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+  url(images/header-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  color: var(--white);
+  
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    padding: 20px;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 50px;
+
+    @include mobile() {
+      display: none;
+    }
+  }
+
+  &__logo-img {
+    height: 22px;
+  }
+}
+
+.hero {
+  // height: 742px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+  height: 743px;
+
+  &__subtitle {
+    max-width: 562px;
+
+    @include mobile() {
+      max-width: 310px;
+    }
+  }
+
+  &__button {
+    padding: 5px 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+  }
+
+  @include mobile {
+    gap: 40px;
+    height: 400px;
+  }
+}

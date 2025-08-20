@@ -1,3 +1,5 @@
-.header {
-  background-color: red;
-}
+@use 'mixins';
+@use 'global';
+@use 'reset';
+
+@use 'blocks/header';
