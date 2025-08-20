@@ -2,4 +2,7 @@
 @use 'global';
 @use 'reset';
 
+@use 'blocks/section';
 @use 'blocks/header';
+@use 'blocks/filter-list';
+@use 'blocks/card';

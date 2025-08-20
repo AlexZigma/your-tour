@@ -18,6 +18,10 @@
     align-items: center;
     height: 88px;
     padding: 20px;
+    
+    @include tablet {
+      max-width: 910px;
+    }
   }
 
   &__nav-list {
@@ -44,6 +48,11 @@
   text-align: center;
   height: 743px;
 
+  @include mobile {
+    gap: 40px;
+    height: 400px;
+  }
+
   &__subtitle {
     max-width: 562px;
 
@@ -56,10 +65,5 @@
     padding: 5px 20px;
     background-color: var(--white);
     border-radius: 10px;
-  }
-
-  @include mobile {
-    gap: 40px;
-    height: 400px;
   }
 }
