@@ -1,0 +1,37 @@
+@use 'mixins' as *;
+
+.button {
+  height: 58px;
+  width: 235px;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @include mobile {
+    height: 47px;
+    width: 134px;
+  }
+  
+  &--submit {
+    background-color: var(--green-400);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--green-300);
+    }
+    &:active {
+      background-color: var(--green-200);
+    }
+  }
+  
+  &--reset {
+    background-color: var(--green-100);
+    color: var(--green-400);
+    
+    &:hover {
+      background-color: var(--gray-100);
+    }
+    &:active {
+      background-color: var(--gray-200);
+    }
+  }
+}

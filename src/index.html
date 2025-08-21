@@ -33,7 +33,7 @@
     <div class="hero">
       <h1 class="hero__title">Идеальные <br> путешествия <br> существуют</h1>
       <p class="hero__subtitle p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-      <button class="hero__button button">Найти тур</button>
+      <button class="hero__button">Найти тур</button>
     </div>
   </header>
 
@@ -139,6 +139,90 @@
       </div>
     </section>
 
+    <section class="section">
+      <header class="section__header">
+        <h2 class="section__title">Собери свой тур</h2>
+        <p class="section__subtitle p-normal">Идейные соображения высшего порядка,<br>а также рамки и место обучения кадров
+        </p>
+      </header>
+      <div class="section__content p-normal">
+        <form class="form" action="">
+          <div class="form__grid">
+
+            <div class="field">
+              <label class="field__label" for="name">Имя</label>
+              <input class="field__input field__input--text" type="text" id="name" placeholder="Введите Ваше имя">
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="direction">Направление</label>
+              <select class="field__input field__input--select" type="text" id="direction">
+                <option class="field__input-option" disabled selected hidden value="">Куда хотите ехать</option>
+                <option class="field__input-option" value="opt-1">Горы</option>
+                <option class="field__input-option" value="opt-2">Реки</option>
+                <option class="field__input-option" value="opt-3">Моря</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="emaol">Email</label>
+              <input class="field__input field__input--text" type="email" id="email" placeholder="example@mail.com">
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="phone">Телефон</label>
+              <input class="field__input field__input--text" type="tel" id="phone"
+                placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="date-start">Дата от</label>
+              <input class="field__input field__input--text" type="date" id="date-start"
+                placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="date-end">Дата до</label>
+              <input class="field__input field__input--text" type="date" id="date-end"
+                placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+            </div>
+
+            <div class="field wide">
+              <label class="field__label" for="comment">Комментарий</label>
+              <textarea class="field__input field__input--area" name="" id="comment"></textarea>
+            </div>
+
+          </div>
+
+          <div class="form__radio radio">
+            <p>Вам есть 18 лет?</p>
+            <div class="radio__list">
+              <label class="radio__item" for="yes">
+                <input class="radio__button" type="radio" name="age" id="yes" checked>
+                <p>Да</p>
+              </label>
+              <label class="radio__item" for="no">
+                <input class="radio__button" type="radio" name="age" id="no">
+                <p>Нет</p>
+              </label>
+            </div>
+          </div>
+
+          <div class="form__license checkbox">
+            <input class="checkbox__button" type="checkbox" name="" id="license">
+            <label class="checkbox__label" for="license">
+              Нажимая кнопку, я принимаю условия 
+              <a class="checkbox__link" href="/">Лицензионного договора</a>
+            </label>
+          </div>
+
+          <div class="form__buttons">
+            <button class="button button--submit" type="button">Найти тур</button>
+            <button class="button button--reset" type="reset">Сбросить</button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
