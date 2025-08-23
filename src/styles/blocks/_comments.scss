@@ -1,0 +1,50 @@
+@use 'mixins' as *;
+
+.comments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comment-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 40px;
+  border-radius: 50px;
+  background-color: var(--beige-200);
+
+  @include mobile {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 70px;
+
+    @include mobile {
+      padding-top: 40px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 8px;
+    color: var(--gray-300);
+  }
+
+  &__img {
+    height: 75px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+}

@@ -1,0 +1,53 @@
+@use 'mixins' as *;
+
+.footer {
+  background-color: var(--beige-200);
+  height: 88px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    width: 1168px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+      width: 918px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 7px;
+    }
+  }
+
+  &__title {
+    color: var(--gray-300);
+  }
+
+  &__social-list {
+    display: flex;
+    gap: 25px;
+
+    @include mobile {
+      gap: 15px;
+    }
+  }
+
+  &__social-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    @include mobile {
+      gap: 5px;
+    }
+  }
+
+  &__social-link:hover {
+    text-decoration: underline solid var(--black) 1px;
+    text-underline-offset: 4px;
+  }
+}
