@@ -33,6 +33,10 @@
     background-color: var(--green-400);
   }
 
+  &:active .card__button {
+    background-color: var(--orange-200);
+  }
+
   &__img {
     position: absolute;
     inset: 0;
@@ -58,10 +62,25 @@
 
   &__top {
     max-width: 554px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include mobile {
+      gap: 13px;
+    }
+    
+    &--big {
+      gap: 37px;
+
+      @include mobile {
+        gap: 20px;
+      }
+    }
   }
 
   &__subtitle {
-    margin-top: 16px;
+    // margin-top: 16px;
     text-wrap-style: stable;
   }
 
@@ -74,13 +93,15 @@
     padding: 7px 20px;
     margin: -7px -20px;
     border-radius: 50px;
+    display: flex;
 
     &::after {
       content: '';
       display: inline-block;
-      background: url(icons/arrow.svg);
-      width: 22px;
-      height: 15px;
+      background: url(icons/arrow.svg) no-repeat;
+      background-position: center;
+      width: 24px;
+      height: 26px;
       margin-left: 16px;
     }
 
@@ -135,8 +156,13 @@
   }
 
   &__list {
-    padding-left: 40px;
-    padding-top: 20px;
+    padding-left: 30px;
+    padding-top: 28px;
+
+    @include mobile{
+      padding-left: 24px;
+      padding-top: 23px;
+    }
   }
 
   &__list-row {

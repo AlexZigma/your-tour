@@ -1,26 +1,37 @@
 @use 'mixins' as *;
 
 .header {
-  // display: flex;
-  
+
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-  linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
-  url(images/header-background.png);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+    url(images/header-background.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   color: var(--white);
-  
+
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 88px;
-    padding: 20px;
-    
+    max-width: 1168px;
+
     @include tablet {
       max-width: 910px;
+    }
+
+    @include mobile {
+      padding: 20px;
+    }
+  }
+
+  &__logo-img {
+    @include mobile {
+      height: 22px;
+      width: 133px;
+      object-fit: cover;
     }
   }
 
@@ -28,25 +39,32 @@
     display: flex;
     gap: 50px;
 
+    @include tablet {
+      gap: 30px;
+    }
+
     @include mobile() {
       display: none;
     }
   }
 
-  &__logo-img {
-    height: 22px;
+  &__nav-link {
+    &:hover {
+      text-decoration: underline solid var(--white) 1px;
+      text-underline-offset: 5px;
+    }
   }
+
 }
 
 .hero {
-  // height: 742px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 50px;
   align-items: center;
   text-align: center;
-  height: 743px;
+  height: 742px;
 
   @include mobile {
     gap: 40px;
@@ -55,6 +73,10 @@
 
   &__subtitle {
     max-width: 562px;
+
+    @include tablet {
+      max-width: 400px;
+    }
 
     @include mobile() {
       max-width: 310px;

@@ -16,6 +16,7 @@
   @include mobile {
     border-radius: 30px;
     padding: 20px 20px 40px 20px;
+    gap: 30px;
   }
 
   &__grid {
@@ -23,6 +24,10 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     row-gap: 33px;
+
+    @include tablet {
+      column-gap: 20px;
+    }
 
     @include mobile {
       grid-template-columns: 1fr;
@@ -33,6 +38,22 @@
   &__buttons {
     display: flex;
     gap: 30px;
+
+    @include mobile {
+      gap: 10px;
+    }
+  }
+
+  // &__button {
+  //   @include mobile {
+  //     width: 134px;
+  //   }
+  // }
+}
+
+.form-bg {
+  @include mobile {
+    margin-top: 40px;
   }
 }
 
@@ -41,17 +62,17 @@
   flex-direction: column;
   gap: 8px;
 
-  &__label {}
-
   &__input {
-    padding: 20px;
+    padding: 19px;
+    // box-sizing: content-box;
     border: 1px solid var(--beige-200);
     border-radius: 10px;
     background-color: var(--beige-100);
     cursor: pointer;
-
+    
     @include mobile {
       padding: 10px;
+      height: 43px;
     }
 
     &::placeholder {
@@ -69,17 +90,20 @@
 
     &--select {
       appearance: none;
-
+      
       background-image: url(/icons/ic-dropdown.svg);
       background-repeat: no-repeat;
-      background-position-x: calc(100% - 20px);
-      background-position-y: center;
       background-size: 26px;
+      background-position-y: center;
+      background-position-x: calc(100% - 20px);
+      
+      @include mobile {
+        background-position-x: calc(100% - 10px);
+        height: 46px;
+      }
 
-      color: var(--gray-300);
-
-      &:has(option:checked:not([value=""])) {
-        color: var(--black);
+      &:has(option:checked[value=""]) {
+        color: var(--gray-300);
       }
     }
 
@@ -109,15 +133,16 @@
     display: flex;
     align-items: center;
     gap: 11px;
-    
+
     @include mobile {
       gap: 10px;
     }
   }
-  
+
   &__button {
     appearance: none;
     position: relative;
+    cursor: pointer;
 
     height: 26px;
     aspect-ratio: 1;
@@ -144,8 +169,12 @@
 .checkbox {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 19px;
   color: var(--gray-300);
+
+  @include tablet {
+    gap: 11px;
+  }
 
   &__button {
     appearance: none;
@@ -156,6 +185,12 @@
     border: 2px solid var(--black);
     border-radius: 6px;
 
+    @include mobile {
+      height: 20px;
+      border-radius: 3px;
+      align-self: flex-start;
+    }
+
     &:checked {
       background: url(icons/check-mark.svg) no-repeat;
       background-position: center;
@@ -163,19 +198,24 @@
     }
   }
 
+  &__label {
+    @include mobile {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
   &__link {
     color: var(--black);
 
     &:hover {
-        text-decoration: underline solid var(--black) 1px;
-      }
-      
-      &:active {
-        color: var(--green-400);
-        text-decoration: underline solid var(--green-400) 1px;
+      text-decoration: underline solid var(--black) 1px;
+    }
+
+    &:active {
+      color: var(--green-400);
+      text-decoration: underline solid var(--green-400) 1px;
     }
   }
 }
-
-
-

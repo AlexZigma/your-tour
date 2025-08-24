@@ -32,14 +32,15 @@
     </nav>
     <div class="hero">
       <h1 class="hero__title">Идеальные <br> путешествия <br> существуют</h1>
-      <p class="hero__subtitle p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-      <button class="hero__button">Найти тур</button>
+      <p class="hero__subtitle p-normal">Идейные соображения высшего порядка <span class="hide--tablet">,</span> а также
+        рамки и место обучения кадров</p>
+      <button class="hero__button p-small">Найти тур</button>
     </div>
   </header>
 
   <main class="main">
 
-    <section class="section">
+    <section class="section" id="tour-choose">
       <header class="section__header">
         <h2 class="section__title">Выбери свой тур</h2>
         <ul class="section__filter-list filter-list p-big">
@@ -113,7 +114,7 @@
           </li>
           <li class="tour-grid__item">
             <div class="tour-grid__card card">
-              <img class="card__img" src="images/card-tour-photo-5.png" alt="">
+              <img class="card__img" src="images/card-tour-photo-5.jpg" alt="">
               <div class="card__top">
                 <h3 class="card__title">Путешествие в горы</h3>
                 <p class="card__subtitle p-small">от 80 000 руб</p>
@@ -147,8 +148,8 @@
         </p>
       </header>
 
-      <div class="section__content p-normal">
-        <form class="form" action="">
+      <div class="section__content form-bg p-normal">
+        <form class="form" action="/">
           <div class="form__grid">
 
             <div class="field">
@@ -158,7 +159,7 @@
 
             <div class="field">
               <label class="field__label" for="direction">Направление</label>
-              <select class="field__input field__input--select" type="text" id="direction">
+              <select class="field__input field__input--select" id="direction">
                 <option class="field__input-option" disabled selected hidden value="">Куда хотите ехать</option>
                 <option class="field__input-option" value="opt-1">Горы</option>
                 <option class="field__input-option" value="opt-2">Реки</option>
@@ -167,7 +168,7 @@
             </div>
 
             <div class="field">
-              <label class="field__label" for="emaol">Email</label>
+              <label class="field__label" for="email">Email</label>
               <input class="field__input field__input--text" type="email" id="email" placeholder="example@mail.com">
             </div>
 
@@ -179,19 +180,17 @@
 
             <div class="field">
               <label class="field__label" for="date-start">Дата от</label>
-              <input class="field__input field__input--text" type="date" id="date-start"
-                placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+              <input class="field__input field__input--text" type="date" id="date-start">
             </div>
 
             <div class="field">
               <label class="field__label" for="date-end">Дата до</label>
-              <input class="field__input field__input--text" type="date" id="date-end"
-                placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+              <input class="field__input field__input--text" type="date" id="date-end">
             </div>
 
             <div class="field wide">
               <label class="field__label" for="comment">Комментарий</label>
-              <textarea class="field__input field__input--area" name="" id="comment"></textarea>
+              <textarea class="field__input field__input--area" name="comment" id="comment"></textarea>
             </div>
 
           </div>
@@ -201,25 +200,25 @@
             <div class="radio__list">
               <label class="radio__item" for="yes">
                 <input class="radio__button" type="radio" name="age" id="yes" checked>
-                <p>Да</p>
+                <span>Да</span>
               </label>
               <label class="radio__item" for="no">
                 <input class="radio__button" type="radio" name="age" id="no">
-                <p>Нет</p>
+                <span>Нет</span>
               </label>
             </div>
           </div>
 
           <div class="form__license checkbox">
-            <input class="checkbox__button" type="checkbox" name="" id="license">
-            <label class="checkbox__label" for="license">
+            <input class="checkbox__button" type="checkbox" name="license" id="license">
+            <label class="checkbox__label p-small" for="license">
               Нажимая кнопку, я принимаю условия
               <a class="checkbox__link" href="/">Лицензионного договора</a>
             </label>
           </div>
 
           <div class="form__buttons">
-            <button class="button button--submit" type="button">Найти тур</button>
+            <a class="button button--submit" href="#tour-choose">Найти тур</a>
             <button class="button button--reset" type="reset">Сбросить</button>
           </div>
         </form>
@@ -229,7 +228,8 @@
     <section class="section">
       <header class="section__header">
         <h2 class="section__title">Отзывы наших <br>путешественников</h2>
-        <p class="section__subtitle">Идейные соображения высшего порядка,<br>а также рамки и место обучения кадров</p>
+        <p class="section__subtitle p-normal">Идейные соображения высшего порядка,<br>а также рамки и место обучения
+          кадров</p>
       </header>
       <div class="section__content comments">
 
@@ -247,7 +247,7 @@
               <h3>Мария</h3>
               <p class="comment-card__subtitle p-small">Тур: Вдали от дома </p>
             </div>
-            <img class="comment-card__img" src="images/avatar-1.png" alt="">
+            <img class="comment-card__img" src="images/review-photo-1.jpg" alt="">
           </div>
 
         </div>
@@ -271,7 +271,7 @@
               <h3>Павел</h3>
               <p class="comment-card__subtitle p-small">Тур: Путешествие в горы</p>
             </div>
-            <img class="comment-card__img" src="images/avatar-2.png" alt="">
+            <img class="comment-card__img" src="images/review-photo-2.jpg" alt="">
           </div>
 
         </div>
@@ -282,29 +282,29 @@
     <section class="section section--wide">
       <header class="section__header">
         <h2 class="section__title">Фотографии путешествий</h2>
-        <p class="section__subtitle">Идейные соображения высшего порядка,<br>
+        <p class="section__subtitle p-normal">Идейные соображения высшего порядка,<br>
           а также рамки и место обучения кадров</p>
       </header>
 
       <div class="section__content photo-grid">
-        <div class="photo-grid__row">
-          <img class="photo-grid__img" src="images/image-1.jpg" alt="">
-          <img class="photo-grid__img hide--tablet" src="images/image-2.jpg" alt="">
-          <img class="photo-grid__img hide--mobile" src="images/image-3.jpg" alt="">
-          <img class="photo-grid__img" src="images/image-4.jpg" alt="">
+        <div class="photo-grid__row photo-grid__row--18">
+          <img class="photo-grid__img" src="images/travel-photo-1.png" alt="">
+          <img class="photo-grid__img hide--tablet" src="images/travel-photo-2.png" alt="">
+          <img class="photo-grid__img hide--mobile" src="images/travel-photo-3.png" alt="">
+          <img class="photo-grid__img" src="images/travel-photo-4.png" alt="">
         </div>
         <div class="photo-grid__row photo-grid__row--center">
-          <img class="photo-grid__img" src="images/image-5.jpg" alt="">
-          <img class="photo-grid__img hide--mobile" src="images/image-6.jpg" alt="">
-          <img class="photo-grid__img hide--tablet" src="images/image-7.jpg" alt="">
-          <img class="photo-grid__img" src="images/image-8.jpg" alt="">
-          <img class="photo-grid__img" src="images/image-9.jpg" alt="">
+          <img class="photo-grid__img" src="images/travel-photo-5.png" alt="">
+          <img class="photo-grid__img hide--mobile" src="images/travel-photo-6.png" alt="">
+          <img class="photo-grid__img hide--tablet" src="images/travel-photo-7.jpg" alt="">
+          <img class="photo-grid__img" src="images/travel-photo-8.png" alt="">
+          <img class="photo-grid__img" src="images/travel-photo-9.png" alt="">
         </div>
         <div class="photo-grid__row">
-          <img class="photo-grid__img" src="images/image-10.jpg" alt="">
-          <img class="photo-grid__img" src="images/image-11.jpg" alt="">
-          <img class="photo-grid__img hide--mobile" src="images/image-12.jpg" alt="">
-          <img class="photo-grid__img hide--tablet" src="images/image-13.jpg" alt="">
+          <img class="photo-grid__img" src="images/travel-photo-10.png" alt="">
+          <img class="photo-grid__img" src="images/travel-photo-11.jpg" alt="">
+          <img class="photo-grid__img hide--mobile" src="images/travel-photo-12.jpg" alt="">
+          <img class="photo-grid__img hide--tablet" src="images/travel-photo-13.jpg" alt="">
         </div>
       </div>
     </section>
@@ -312,31 +312,33 @@
     <section class="section">
       <header class="section__header">
         <h2 class="section__title">Истории путешествий</h2>
-        <p class="section__subtitle">Идейные соображения высшего порядка,<br>
+        <p class="section__subtitle p-normal">Идейные соображения высшего порядка,<br>
           а также рамки и место обучения кадров</p>
       </header>
       <div class="section__content history">
         <ul class="history__list">
 
           <li class="history__item">
-            <div class="card card--big">
-              <img class="card__img" src="images/story-photo-1.jpg" alt="">
-              <div class="card__top">
+            <div class="card card--big mirror">
+              <img class="card__img" src="images/story-photo-1.png" alt="">
+              <div class="card__top card__top--big">
                 <h3 class="card__title">Автостопом в Стамбул</h3>
-                <p class="card__subtitle p-normal">
-                  Идейные соображения высшего порядка, а также рамки и
-                  место обучения кадров обеспечивает широкому кругу
-                  (специалистов) участие в формировании новых предложений:
-                </p>
-                <ul class="card__list p-normal">
-                  <li class="card__list-row">вкусная еда</li>
-                  <li class="card__list-row">дешевый транспорт</li>
-                  <li class="card__list-row">красивый город.</li>
-                </ul>
+                <div>
+                  <p class="card__subtitle p-normal">
+                    Идейные соображения высшего порядка, а также рамки и
+                    место обучения кадров обеспечивает широкому кругу
+                    (специалистов) участие в формировании новых предложений:
+                  </p>
+                  <ul class="card__list p-normal">
+                    <li class="card__list-row">вкусная еда</li>
+                    <li class="card__list-row">дешевый транспорт</li>
+                    <li class="card__list-row">красивый город.</li>
+                  </ul>
+                </div>
               </div>
               <div class="card__bottom">
                 <a class="card__button p-big" href="/">Подробнее</a>
-                <div class="card__socials">
+                <div class="card__socials p-normal">
                   <a class="card__link" href="/1">telegram</a>
                   <a class="card__link" href="/2">facebook</a>
                   <a class="card__link" href="/3">YouTube</a>
@@ -346,8 +348,8 @@
           </li>
           <li class="history__item">
             <div class="card card--big">
-              <img class="card__img" src="images/story-photo-2.jpg" alt="">
-              <div class="card__top">
+              <img class="card__img" src="images/story-photo-2.png" alt="">
+              <div class="card__top card__top--big">
                 <h3 class="card__title">Автостопом в Стамбул</h3>
                 <p class="card__subtitle p-normal">
                   Идейные соображения высшего порядка, а также рамки и
@@ -357,7 +359,7 @@
               </div>
               <div class="card__bottom">
                 <a class="card__button p-big" href="/">Подробнее</a>
-                <div class="card__socials">
+                <div class="card__socials p-normal">
                   <a class="card__link" href="/1">telegram</a>
                   <a class="card__link" href="/2">facebook</a>
                   <a class="card__link" href="/3">ВКонтакте</a>
@@ -366,9 +368,9 @@
             </div>
           </li>
           <li class="history__item">
-            <div class="card card--big">
-              <img class="card__img" src="images/story-photo-3.jpg" alt="">
-              <div class="card__top">
+            <div class="card card--big mirror">
+              <img class="card__img mirror" src="images/story-photo-3.png" alt="">
+              <div class="card__top card__top--big">
                 <h3 class="card__title">Автостопом в Стамбул</h3>
                 <p class="card__subtitle p-normal">
                   Идейные соображения высшего порядка, а также рамки и
@@ -378,7 +380,7 @@
               </div>
               <div class="card__bottom">
                 <a class="card__button p-big" href="/">Подробнее</a>
-                <div class="card__socials">
+                <div class="card__socials p-normal">
                   <a class="card__link" href="/1">telegram</a>
                   <a class="card__link" href="/2">facebook</a>
                   <a class="card__link" href="/3">ВКонтакте</a>
@@ -405,7 +407,7 @@
   <footer class="footer">
     <div class="footer__content">
       <p class="footer__title p-normal">Наши социальные сети</p>
-      <div class="footer__social-list">
+      <div class="footer__social-list p-normal">
         <div class="footer__social-item">
           <img class="footer__social-icon" src="icons/telegram.svg" alt="telegram">
           <a class="footer__social-link" href="/">telegram</a>

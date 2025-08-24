@@ -7,6 +7,10 @@
   justify-content: center;
   align-items: center;
 
+  @include mobile {
+    height: 98px;
+  }
+
   &__content {
     width: 1168px;
     display: flex;
@@ -43,6 +47,13 @@
 
     @include mobile {
       gap: 5px;
+    }
+  }
+
+  &__social-icon {
+    height: 26px;
+    @include mobile {
+      width: 22px;
     }
   }
 

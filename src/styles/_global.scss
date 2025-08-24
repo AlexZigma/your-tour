@@ -27,6 +27,9 @@
   src: url("/fonts/roboto.woff2") format("woff2"),
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -45,11 +48,14 @@ body {
 }
 
 .mirror {
-  position: absolute;
-  inset: 0;
-  transform: scaleX(-1);
-  z-index: -2;
+  & .card__img {
+    transform: scaleX(-1);
+  }
+  &:hover .card__img {
+    transform: scaleX(-1.2) scaleY(1.2) !important;
+  }
 }
+
 
 .hide {
   &--tablet {
@@ -69,7 +75,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 96px;
-  line-height: 109%;
+  line-height: 105px;
   letter-spacing: 0.02em;
 
   @include mobile() {
@@ -82,7 +88,7 @@ h2 {
   font-style: normal;
   font-weight: 700;
   font-size: 59px;
-  line-height: 124%;
+  line-height: 73px;
 
   @include mobile() {
     font-size: 34px;
@@ -100,9 +106,8 @@ h3 {
   @include mobile() {
     font-size: 23px;
     font-weight: 700;
-    line-height: 120%;
+    line-height: 28px;
     letter-spacing: 0.04em;
-
   }
 }
 
@@ -110,13 +115,13 @@ h3 {
   font-style: normal;
   font-weight: 700;
   font-size: 23px;
-  line-height: 122%;
+  line-height: 28px;
+  text-wrap-style: stable;
+  letter-spacing: 0.001em;
 
   @include mobile() {
     font-size: 16px;
-    line-height: 142%;
-    letter-spacing: 0;
-
+    line-height: 23px;
   }
 }
 
@@ -124,11 +129,12 @@ h3 {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 142%;
+  line-height: 28px;
+  // letter-spacing: 0.003em;
 
   @include mobile() {
     font-size: 16px;
-    letter-spacing: 0%;
+    line-height: 23px;
   }
 }
 
@@ -136,7 +142,7 @@ h3 {
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  line-height: 142%;
+  line-height: 24px;
   letter-spacing: -0.01em;
 
   @include mobile() {

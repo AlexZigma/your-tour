@@ -46,7 +46,7 @@
   }
 
   &--wide {
-    max-width: none;
+    max-width: 1920px;
     padding-inline: 30px;
 
     @include tablet {
@@ -69,6 +69,7 @@
     gap: 30px;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     @include tablet {
       grid-template-columns: 1fr 1fr;
@@ -79,6 +80,7 @@
       grid-template-columns: 1fr;
     }
   }
+
 }
 
 .photo-grid {
@@ -94,6 +96,8 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
+    // height: 301px;
+    align-items: center;
 
     @include tablet {
       column-gap: 20px;
@@ -101,8 +105,14 @@
     }
 
     @include mobile {
-      column-gap: 20px;
+      column-gap: 10px;
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--18 {
+      @include mobile {
+        column-gap: 18px;
+      }
     }
 
     &--center {
@@ -110,12 +120,12 @@
 
 
       @include tablet {
-        column-gap: 20px;
+        // column-gap: 20px;
         grid-template-columns: repeat(4, 1fr);
       }
 
       @include mobile {
-        column-gap: 20px;
+        // column-gap: 10px;
         grid-template-columns: repeat(3, 1fr);
       }
     }
@@ -123,9 +133,14 @@
 
   &__img {
     border-radius: 50px;
+    object-fit: cover;
+    object-position: center;
+    height: 301px;
+    width: 100%;
 
     @include mobile {
       border-radius: 20px;
+      height: 110px;
     }
 
   }
@@ -182,6 +197,7 @@
 
   &__action {
     color: var(--black);
+    text-underline-offset: 5px;
 
     &:hover {
       text-decoration: underline solid var(--black) 1px;
