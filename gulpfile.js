@@ -6,7 +6,7 @@ const sass = require('gulp-sass')(require('sass'));
 function compileSass() {
   return gulp.src("src/styles/**/*.scss")
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest("src"))
+    .pipe(gulp.dest("./"))
     .pipe(browserSync.stream());
 }
 
@@ -17,7 +17,7 @@ function serve() {
   });
 
   gulp.watch("src/styles/**/*.scss", compileSass);
-  gulp.watch("src/*.html").on('change', browserSync.reload);
+  gulp.watch("*.html").on('change', browserSync.reload);
 }
 
 // Export tasks
