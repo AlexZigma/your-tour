@@ -13,7 +13,7 @@ function compileSass() {
 // Static server + watch files
 function serve() {
   browserSync.init({
-    server: "./src"
+    server: "."
   });
 
   gulp.watch("src/styles/**/*.scss", compileSass);
