@@ -538,6 +538,9 @@ button {
   color: var(--orange-200);
   text-decoration: underline solid var(--orange-200) 2px;
 }
+.filter-list__button--selected:hover {
+  text-decoration: underline solid var(--orange-200) 2px;
+}
 
 .card {
   display: flex;
