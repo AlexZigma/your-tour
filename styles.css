@@ -19,7 +19,7 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/roboto.woff2") format("woff2");
+  src: url("src/fonts/roboto.woff2") format("woff2");
 }
 html {
   scroll-behavior: smooth;
@@ -468,6 +468,11 @@ button {
   text-align: center;
   height: 742px;
 }
+@media (max-width: 1240px) {
+  .hero {
+    height: 743px;
+  }
+}
 @media (max-width: 1000px) {
   .hero {
     gap: 40px;
@@ -556,12 +561,6 @@ button {
 .card:hover .card__img {
   transform: scale(1.2);
 }
-.card:hover .card__button {
-  background-color: var(--green-400);
-}
-.card:active .card__button {
-  background-color: var(--orange-200);
-}
 .card__img {
   position: absolute;
   inset: 0;
@@ -614,7 +613,7 @@ button {
 .card__button::after {
   content: "";
   display: inline-block;
-  background: url(icons/arrow.svg) no-repeat;
+  background: url(src/icons/arrow.svg) no-repeat;
   background-position: center;
   width: 24px;
   height: 26px;
@@ -624,6 +623,12 @@ button {
   content: "";
   position: absolute;
   inset: 0;
+}
+.card__button:hover {
+  background-color: var(--green-400);
+}
+.card__button:active {
+  background-color: var(--orange-200);
 }
 .card__socials {
   display: flex;
@@ -639,6 +644,10 @@ button {
 }
 .card__link:hover {
   text-decoration: underline solid var(--white) 1px;
+}
+.card__link:active {
+  text-decoration: underline solid var(--orange-200) 1px;
+  color: var(--orange-200);
 }
 .card--big {
   height: 567px;
@@ -755,7 +764,7 @@ button {
 }
 .field__input--select {
   appearance: none;
-  background-image: url(/icons/ic-dropdown.svg);
+  background-image: url(src/icons/ic-dropdown.svg);
   background-repeat: no-repeat;
   background-size: 26px;
   background-position-y: center;
@@ -850,7 +859,7 @@ button {
   }
 }
 .checkbox__button:checked {
-  background: url(icons/check-mark.svg) no-repeat;
+  background: url(src/icons/check-mark.svg) no-repeat;
   background-position: center;
   background-size: 60%;
 }
@@ -1019,7 +1028,13 @@ button {
     width: 22px;
   }
 }
+.footer__social-link {
+  text-underline-offset: 4px;
+}
 .footer__social-link:hover {
   text-decoration: underline solid var(--black) 1px;
-  text-underline-offset: 4px;
+}
+.footer__social-link:active {
+  text-decoration: underline solid var(--orange-200) 1px;
+  color: var(--orange-200);
 }

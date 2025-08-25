@@ -91,7 +91,7 @@
     &--select {
       appearance: none;
       
-      background-image: url(/icons/ic-dropdown.svg);
+      background-image: url(src/icons/ic-dropdown.svg);
       background-repeat: no-repeat;
       background-size: 26px;
       background-position-y: center;
@@ -105,6 +105,10 @@
       &:has(option:checked[value=""]) {
         color: var(--gray-300);
       }
+    }
+
+    &--date {
+      
     }
 
     &--area {
@@ -192,7 +196,7 @@
     }
 
     &:checked {
-      background: url(icons/check-mark.svg) no-repeat;
+      background: url(src/icons/check-mark.svg) no-repeat;
       background-position: center;
       background-size: 60%;
     }

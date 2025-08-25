@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>YourTour</title>
+  <link rel="shortcut icon" href="src/icons/favicon.png" type="image/x-icon">
+  <meta name="description" content="Идейные соображения высшего порядка, а также рамки и место обучения кадров">
+  <meta name="keywords" content="путешествия, туры, отдых, билеты, экскурсии, море, горы, пляж, туризм, выбрать тур">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -180,12 +183,12 @@
 
             <div class="field">
               <label class="field__label" for="date-start">Дата от</label>
-              <input class="field__input field__input--text" type="date" id="date-start">
+              <input class="field__input field__input--date" type="text" id="date-start" placeholder="ДД.ММ.ГГГГ">
             </div>
 
             <div class="field">
               <label class="field__label" for="date-end">Дата до</label>
-              <input class="field__input field__input--text" type="date" id="date-end">
+              <input class="field__input field__input--date" type="text" id="date-end" placeholder="ДД.ММ.ГГГГ">
             </div>
 
             <div class="field wide">
@@ -199,7 +202,7 @@
             <p>Вам есть 18 лет?</p>
             <div class="radio__list">
               <label class="radio__item" for="yes">
-                <input class="radio__button" type="radio" name="age" id="yes" checked>
+                <input class="radio__button" type="radio" name="age" id="yes">
                 <span>Да</span>
               </label>
               <label class="radio__item" for="no">

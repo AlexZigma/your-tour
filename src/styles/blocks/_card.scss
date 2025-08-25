@@ -29,13 +29,13 @@
     transform: scale(1.2);
   }
 
-  &:hover .card__button {
-    background-color: var(--green-400);
-  }
+  // &:hover .card__button {
+  //   background-color: var(--green-400);
+  // }
 
-  &:active .card__button {
-    background-color: var(--orange-200);
-  }
+  // &:active .card__button {
+  //   background-color: var(--orange-200);
+  // }
 
   &__img {
     position: absolute;
@@ -46,7 +46,6 @@
     object-fit: cover;
     object-position: center;
     transition: transform 300ms ease;
-
   }
 
   &::before {
@@ -69,7 +68,7 @@
     @include mobile {
       gap: 13px;
     }
-    
+
     &--big {
       gap: 37px;
 
@@ -98,7 +97,7 @@
     &::after {
       content: '';
       display: inline-block;
-      background: url(icons/arrow.svg) no-repeat;
+      background: url(src/icons/arrow.svg) no-repeat;
       background-position: center;
       width: 24px;
       height: 26px;
@@ -109,6 +108,14 @@
       content: '';
       position: absolute;
       inset: 0;
+    }
+
+    &:hover {
+      background-color: var(--green-400);
+    }
+
+    &:active {
+      background-color: var(--orange-200);
     }
 
   }
@@ -128,6 +135,11 @@
 
     &:hover {
       text-decoration: underline solid var(--white) 1px;
+    }
+
+    &:active {
+      text-decoration: underline solid var(--orange-200) 1px;
+      color: var(--orange-200);
     }
   }
 
@@ -159,7 +171,7 @@
     padding-left: 30px;
     padding-top: 28px;
 
-    @include mobile{
+    @include mobile {
       padding-left: 24px;
       padding-top: 23px;
     }
