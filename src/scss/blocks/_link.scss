@@ -1,0 +1,135 @@
+@use 'mixins' as *;
+
+.link {
+  position: relative;
+  display: block;
+
+  // height: 100%;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+    background-color: var(--white);
+    width: 0;
+    height: 1px;
+    transition-duration: inherit;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &--phone {
+
+    &:active {
+      color: var(--green-400);
+    }
+
+    &:active::after {
+      background-color: var(--green-400);
+    }
+  }
+
+  &--email {
+    display: inline-block;
+    color: var(--black);
+
+    &:hover::after {
+      background-color: var(--black);
+    }
+
+    &:active {
+      color: var(--green-400);
+    }
+
+    &:active::after {
+      background-color: var(--green-400);
+    }
+  }
+
+  &--filter {
+    &::after {
+      height: 2px;
+    }
+    &:hover::after {
+      background-color: var(--black);
+    }
+
+    &.link--selected {
+      color: var(--orange-200);
+      &::after {
+        width: 100%;
+        background-color: var(--orange-200);
+      }
+
+      &:hover::after {
+        background-color: var(--orange-200);
+      }
+    }
+  }
+
+  &--social {
+    // &:hover::after {
+    //   background-color: var(--black);
+    // }
+
+    &:active {
+      color: var(--orange-200);
+    }
+
+    &:active::after {
+      background-color: var(--orange-200);
+    }
+  }
+
+  &--footer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    // position: relative;
+
+    @include mobile {
+      gap: 5px;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    .link__text {
+      transition-duration: inherit;
+      position: relative;
+    }
+
+    .link__text::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      translate: -50%;
+      background-color: var(--black);
+      width: 0;
+      height: 1px;
+      transition-duration: inherit;
+    }
+
+    &:hover .link__text::after {
+      width: 100%;
+    }
+
+    &:active {
+      color: var(--orange-200);
+    }
+
+    &:active .link__text::after {
+      background-color: var(--orange-200);
+    }
+
+    &:active .link__icon {
+      transition-duration: inherit;
+      filter: brightness(0) saturate(100%) invert(67%) sepia(77%) saturate(2796%) hue-rotate(8deg) brightness(101%) contrast(104%);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use 'mixins' as *;
+
+.story {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+}

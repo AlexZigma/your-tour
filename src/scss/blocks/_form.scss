@@ -91,7 +91,7 @@
     &--select {
       appearance: none;
       
-      background-image: url(src/icons/ic-dropdown.svg);
+      background-image: url(icons/ic-dropdown.svg);
       background-repeat: no-repeat;
       background-size: 26px;
       background-position-y: center;
@@ -157,15 +157,20 @@
       height: 20px;
     }
 
-    &:checked::after {
+    &::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background-color: var(--black);
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
       border-radius: 50%;
-      height: 50%;
+      height: 0%;
       aspect-ratio: 1;
-      margin: auto;
+      background-color: var(--black);
+      transition-duration: inherit;
+    }
+    &:checked::after {
+      height: 50%;
     }
   }
 }
@@ -183,6 +188,7 @@
   &__button {
     appearance: none;
     cursor: pointer;
+    position: relative;
 
     height: 26px;
     aspect-ratio: 1;
@@ -195,10 +201,23 @@
       align-self: flex-start;
     }
 
-    &:checked {
-      background: url(src/icons/check-mark.svg) no-repeat;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      background-image: url(icons/check-mark.svg);
+      background-size: contain;
       background-position: center;
-      background-size: 60%;
+      background-repeat: no-repeat;
+      height: 0%;
+      aspect-ratio: 1;
+      transition-duration: inherit;
+    }
+
+    &:checked::after {
+      height: 60%;
     }
   }
 

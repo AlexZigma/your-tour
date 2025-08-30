@@ -1,0 +1,22 @@
+@use 'mixins' as *;
+
+.filter-list {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include mobile {
+    column-gap: 10px;
+  }
+
+  &__button {
+    // background: none;
+    // border: none;
+    // cursor: pointer;
+    // height: 34px;
+    // padding-bottom: 6px;
+
+  }
+}

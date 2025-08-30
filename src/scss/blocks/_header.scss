@@ -4,7 +4,7 @@
 
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
-    url(src/images/header-background.png);
+    url(images/header-background.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,12 +48,60 @@
     }
   }
 
-  &__nav-link {
-    &:hover {
-      text-decoration: underline solid var(--white) 1px;
-      text-underline-offset: 5px;
+  &-fixed {
+    position: fixed;
+    width: 100%;
+    top: -100px;
+    background: rgba(243, 239, 232, 0.6);
+    backdrop-filter: blur(27px);
+    z-index: 10;
+    transition-duration: 300ms;
+
+    & .header__logo {
+      filter: brightness(0) saturate(100%);
+    }
+
+    & .header__nav-link::after,
+    & .header__phone::after {
+      background-color: var(--black);
+    }
+
+    &--show {
+      top: 0;
     }
   }
+
+
+  // &__nav-link {
+  //   position: relative;
+  //   display: block;
+  //   &::after {
+  //     content: '';
+  //     position: absolute;
+  //     bottom: 0;
+  //     left: 0;
+  //     background-color: var(--white);
+  //     width: 0;
+  //     height: 1px;
+  //     transition-duration: inherit;
+  //   }
+  //   &:hover::after{
+  //     width: 100%;
+  //   }
+  // }
+
+  // &__phone {
+  //   text-underline-offset: 5px;
+
+  //   &:hover {
+  //     text-decoration: underline solid var(--white) 1px;
+  //   }
+
+  //   &:active {
+  //     color: var(--green-400);
+  //     text-decoration: underline solid var(--green-400) 1px;
+  //   }
+  // }
 
 }
 
@@ -69,7 +117,7 @@
   @include tablet {
     height: 743px;
   }
-  
+
   @include mobile {
     gap: 40px;
     height: 400px;

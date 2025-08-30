@@ -2,19 +2,32 @@
   "name": "your-tour-gulp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "homepage": "https://github.com/AlexZigma/your-tour#readme",
+  "bugs": {
+    "url": "https://github.com/AlexZigma/your-tour/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexZigma/your-tour.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "del": "^8.0.0",
+    "esbuild": "^0.25.9",
+    "gulp-esbuild": "^0.14.1",
+    "gulp-less": "^5.0.0",
+    "imask": "^7.6.1"
+  },
   "devDependencies": {
     "browser-sync": "^3.0.4",
     "gulp": "^5.0.1",
     "gulp-sass": "^6.0.1",
     "sass": "^1.90.0"
-  },
-  "dependencies": {
-    "gulp-less": "^5.0.0"
   }
 }

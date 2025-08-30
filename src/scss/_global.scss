@@ -24,7 +24,7 @@
   font-family: "Roboto";
   // font-style: normal;
   // font-weight: 400;
-  src: url("src/fonts/roboto.woff2") format("woff2"),
+  src: url("fonts/roboto.woff2") format("woff2"),
 }
 
 html {
@@ -35,6 +35,14 @@ body {
   font-family: 'Roboto', sans-serif;
   color: var(--black);
   background-color: var(--beige-100);
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  transition-duration: 300ms;
 }
 
 .container {
