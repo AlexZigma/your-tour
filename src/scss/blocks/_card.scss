@@ -148,13 +148,13 @@
   }
 
   &--big {
-    max-height: 567px;
+    height: 567px;
     max-width: 1170px;
     padding: 60px;
 
     @include mobile {
       padding: 30px;
-      height: 455px;
+      max-height: 455px;
     }
 
     &::before {

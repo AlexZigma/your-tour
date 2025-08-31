@@ -16,7 +16,10 @@
     // border: none;
     // cursor: pointer;
     // height: 34px;
-    // padding-bottom: 6px;
+    padding-bottom: 6px;
 
+    @include mobile {
+      padding-bottom: 0;
+    }
   }
 }

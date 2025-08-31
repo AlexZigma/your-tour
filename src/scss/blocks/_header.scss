@@ -28,6 +28,11 @@
     }
   }
 
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
   &__logo-img {
     @include mobile {
       height: 22px;

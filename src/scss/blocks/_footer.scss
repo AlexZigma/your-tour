@@ -34,6 +34,8 @@
   &__social-list {
     display: flex;
     gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @include mobile {
       gap: 15px;

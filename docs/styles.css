@@ -370,6 +370,10 @@ button {
     max-width: clamp(320px, 320px + 590 * (100vw - 360px) / 664, 910px);
   }
 }
+.header__logo {
+  display: flex;
+  align-items: center;
+}
 @media (max-width: 970px) {
   .header__logo-img {
     height: 22px;
@@ -469,6 +473,15 @@ button {
     column-gap: 10px;
   }
 }
+.filter-list__button {
+  padding-bottom: 6px;
+}
+@media (max-width: 970px) {
+  .filter-list__button {
+    padding-bottom: 0;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -571,14 +584,14 @@ button {
   }
 }
 .card--big {
-  max-height: 567px;
+  height: 567px;
   max-width: 1170px;
   padding: 60px;
 }
 @media (max-width: 970px) {
   .card--big {
     padding: 30px;
-    height: 455px;
+    max-height: 455px;
   }
 }
 .card--big::before {
@@ -1056,6 +1069,8 @@ button {
 .footer__social-list {
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media (max-width: 970px) {
   .footer__social-list {
