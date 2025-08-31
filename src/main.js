@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import IMask from 'imask';
 
@@ -14,8 +14,8 @@ window.addEventListener('scroll', () => {
 const filterButtons = document.querySelectorAll('.link--filter');
 for (let button of filterButtons) {
   button.addEventListener('click', () => {
-    filterButtons.forEach(btn => btn.classList.remove('link--selected'))
-    button.classList.add('link--selected')
+    filterButtons.forEach(btn => btn.classList.remove('link--selected'));
+    button.classList.add('link--selected');
   })
 }
 
