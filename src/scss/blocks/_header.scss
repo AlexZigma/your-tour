@@ -16,14 +16,15 @@
     justify-content: space-between;
     align-items: center;
     height: 88px;
-    max-width: 1168px;
+    max-width: fluid-value(910, 1168, 1024, 1260);
+    margin-inline: auto;
 
     @include tablet {
-      max-width: 910px;
     }
-
+    
     @include mobile {
-      padding: 20px;
+      max-width: fluid-value(320, 910, 360, 1024);
+      // padding: 20px;
     }
   }
 
@@ -71,38 +72,6 @@
     }
   }
 
-
-  // &__nav-link {
-  //   position: relative;
-  //   display: block;
-  //   &::after {
-  //     content: '';
-  //     position: absolute;
-  //     bottom: 0;
-  //     left: 0;
-  //     background-color: var(--white);
-  //     width: 0;
-  //     height: 1px;
-  //     transition-duration: inherit;
-  //   }
-  //   &:hover::after{
-  //     width: 100%;
-  //   }
-  // }
-
-  // &__phone {
-  //   text-underline-offset: 5px;
-
-  //   &:hover {
-  //     text-decoration: underline solid var(--white) 1px;
-  //   }
-
-  //   &:active {
-  //     color: var(--green-400);
-  //     text-decoration: underline solid var(--green-400) 1px;
-  //   }
-  // }
-
 }
 
 .hero {
@@ -115,12 +84,12 @@
   height: 742px;
 
   @include tablet {
-    height: 743px;
+    height: fluid-value(400, 743);
   }
 
   @include mobile {
     gap: 40px;
-    height: 400px;
+    // height: 400px;
   }
 
   &__subtitle {
@@ -139,6 +108,7 @@
     padding: 5px 20px;
     background-color: var(--white);
     border-radius: 10px;
+    color: var(--black);
 
     &:hover {
       background-color: var(--orange-200);

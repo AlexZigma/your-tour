@@ -3546,24 +3546,36 @@
       };
       var phoneMask = IMask(phoneInput, phoneMaskOption);
       var date = /* @__PURE__ */ new Date();
-      date.setDate(date.getDate() - 1);
+      var yyyy = date.getFullYear();
+      var mm = String(date.getMonth() + 1).padStart(2, "0");
+      var dd = String(date.getDate()).padStart(2, "0");
+      var minDate = `${yyyy}-${mm}-${dd}`;
       var dateStart = document.getElementById("date-start");
-      IMask(
-        dateStart,
-        {
-          pattern: "d.`m.`Y",
-          mask: Date,
-          min: date,
-          lazy: false
-          // placeholderChar: ' '
-        }
-      );
-      dateStart.addEventListener("blur", (e) => {
-        if (dateStart.value === "__.__.____") {
-          dateStart.value = "";
-        }
-      });
+      var dateStartText = document.getElementById("date-start-text");
       var dateEnd = document.getElementById("date-end");
+      var dateEndText = document.getElementById("date-end-text");
+      dateStart.min = minDate;
+      dateEnd.min = minDate;
+      dateStartText.addEventListener("click", () => {
+        dateStart.showPicker();
+      });
+      dateStart.addEventListener("change", (e) => {
+        date = e.target.value.split("-");
+        dateStartText.value = [date[2], date[1], date[0]].join(".");
+        dateEnd.min = e.target.value;
+      });
+      dateEndText.addEventListener("click", () => {
+        dateEnd.showPicker();
+      });
+      dateEnd.addEventListener("change", (e) => {
+        date = e.target.value.split("-");
+        dateEndText.value = [date[2], date[1], date[0]].join(".");
+      });
+      var form = document.getElementById("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        document.getElementById("tour-choose").scrollIntoView();
+      });
     }
   });
   require_main();

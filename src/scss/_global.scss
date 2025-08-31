@@ -45,6 +45,15 @@ select {
   transition-duration: 300ms;
 }
 
+a,
+button,
+input,
+textarea,
+select,
+label {
+  cursor: pointer;
+}
+
 .container {
   max-width: 1170px;
   margin-inline: auto;
@@ -59,6 +68,7 @@ select {
   & .card__img {
     transform: scaleX(-1);
   }
+
   &:hover .card__img {
     transform: scaleX(-1.2) scaleY(1.2) !important;
   }
@@ -82,12 +92,13 @@ select {
 h1 {
   font-style: normal;
   font-weight: 700;
-  font-size: 96px;
+  // font-size: 96px;
+  font-size: fluid-value(34, 96, 360, 1024);
   line-height: 105px;
   letter-spacing: 0.02em;
 
   @include mobile() {
-    font-size: 34px;
+    // font-size: 34px;
     line-height: 112%;
   }
 }
@@ -95,11 +106,12 @@ h1 {
 h2 {
   font-style: normal;
   font-weight: 700;
-  font-size: 59px;
+  // font-size: 59px;
+  font-size: fluid-value(34, 59, 360, 1024);
   line-height: 73px;
 
   @include mobile() {
-    font-size: 34px;
+    // font-size: 34px;
     line-height: 112%;
     letter-spacing: 0.02em;
   }
@@ -108,13 +120,14 @@ h2 {
 h3 {
   font-style: normal;
   font-weight: 500;
-  font-size: 35px;
+  // font-size: 35px;
+  font-size: fluid-value(28, 35, 360, 1024);
   line-height: 122%;
 
   @include mobile() {
     font-size: 23px;
     font-weight: 700;
-    line-height: 28px;
+    // line-height: 28px;
     letter-spacing: 0.04em;
   }
 }
@@ -122,13 +135,14 @@ h3 {
 .p-big {
   font-style: normal;
   font-weight: 700;
-  font-size: 23px;
+  // font-size: 23px;
+  font-size: fluid-value(16, 23, 360, 1024);
   line-height: 28px;
   text-wrap-style: stable;
   letter-spacing: 0.001em;
 
   @include mobile() {
-    font-size: 16px;
+    // font-size: 16px;
     line-height: 23px;
   }
 }
@@ -136,12 +150,13 @@ h3 {
 .p-normal {
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  // font-size: 20px;
+  font-size: fluid-value(16, 20, 360, 1024);
   line-height: 28px;
   // letter-spacing: 0.003em;
 
   @include mobile() {
-    font-size: 16px;
+    // font-size: 16px;
     line-height: 23px;
   }
 }
@@ -149,11 +164,12 @@ h3 {
 .p-small {
   font-style: normal;
   font-weight: 400;
-  font-size: 17px;
+  // font-size: 17px;
+  font-size: fluid-value(16, 17, 360, 1024);
   line-height: 24px;
   letter-spacing: -0.01em;
 
   @include mobile() {
-    font-size: 16px;
+    // font-size: 16px;
   }
 }

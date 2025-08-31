@@ -108,7 +108,10 @@
     }
 
     &--date {
-      
+      position: absolute;
+      inset: 0;
+      z-index: -10;
+      // opacity: 0;
     }
 
     &--area {
@@ -123,6 +126,14 @@
 
   &__input-option:not([value=""]) {
     color: var(--black);
+  }
+
+  &__container {
+    position: relative;
+    
+    & .field__input{
+      width: 100%;
+    }
   }
 }
 

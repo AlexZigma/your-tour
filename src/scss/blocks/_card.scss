@@ -13,14 +13,18 @@
   overflow: hidden;
   color: var(--white);
   padding: 50px;
-
+  margin: 0 auto;
+  
   @include tablet {
     // max-width: 450px;
   }
-
+  
   @include mobile {
-    height: 318px;
-    width: 318px;
+    // max-height: 318px;
+    // max-width: 318px;
+    max-width: fluid-value(318, 450, 360, 1024);
+    max-height: fluid-value(318, 450, 360, 1024);
+    // aspect-ratio: 1;
     border-radius: 20px;
     padding: 25px;
   }
@@ -144,8 +148,8 @@
   }
 
   &--big {
-    height: 567px;
-    // width: 1170px;
+    max-height: 567px;
+    max-width: 1170px;
     padding: 60px;
 
     @include mobile {
