@@ -19,7 +19,21 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("fonts/roboto.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Roboto-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/Roboto-Medium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/Roboto-Bold.woff2") format("woff2");
 }
 html {
   scroll-behavior: smooth;
@@ -899,6 +913,21 @@ button {
 .link:hover::after {
   width: 100%;
 }
+.link__icon {
+  width: 26px;
+  height: 26px;
+  object-fit: none;
+}
+@media (max-width: 970px) {
+  .link__icon--vk {
+    width: 20px;
+  }
+}
+@media (max-width: 970px) {
+  .link__icon--tg {
+    width: 22px;
+  }
+}
 .link--phone:active {
   color: var(--green-400);
 }
@@ -1077,13 +1106,12 @@ button {
     gap: 15px;
   }
 }
+.footer__social-item {
+  display: flex;
+  align-items: center;
+}
 .footer__social-icon {
   height: 26px;
-}
-@media (max-width: 970px) {
-  .footer__social-icon {
-    width: 22px;
-  }
 }
 .footer__social-link {
   display: flex;

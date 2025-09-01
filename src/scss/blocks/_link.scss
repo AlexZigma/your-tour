@@ -21,6 +21,24 @@
     width: 100%;
   }
 
+  &__icon {
+    width: 26px;
+    height: 26px;
+    object-fit: none;
+
+    &--vk {
+      @include mobile {
+        width: 20px;
+      }
+    }
+
+    &--tg {
+      @include mobile {
+        width: 22px;
+      }
+    }
+  }
+
   &--phone {
 
     &:active {

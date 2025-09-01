@@ -42,13 +42,16 @@
     }
   }
 
-  &__social-item {}
+  &__social-item {
+    display: flex;
+    align-items: center;
+  }
 
   &__social-icon {
     height: 26px;
 
     @include mobile {
-      width: 22px;
+      // width: 22px;
     }
   }
 
