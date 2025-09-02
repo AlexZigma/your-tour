@@ -43,6 +43,8 @@ body {
   font-family: "Roboto", sans-serif;
   color: var(--black);
   background-color: var(--beige-100);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a,
@@ -89,6 +91,12 @@ label {
   }
 }
 
+@media (max-width: 970px) {
+  .show-mobile {
+    display: inline;
+  }
+}
+
 h1 {
   font-style: normal;
   font-weight: 700;
@@ -98,7 +106,7 @@ h1 {
 }
 @media (max-width: 970px) {
   h1 {
-    line-height: 112%;
+    line-height: 38px;
   }
 }
 
@@ -162,6 +170,12 @@ h3 {
   line-height: 24px;
   letter-spacing: -0.01em;
 }
+@media (max-width: 970px) {
+  .p-small {
+    line-height: 23px;
+  }
+}
+
 /* 1. Use a more-intuitive box-sizing model */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -567,6 +581,7 @@ button {
   margin: -7px -20px;
   border-radius: 50px;
   display: flex;
+  align-items: center;
 }
 .card__button::after {
   content: "";
@@ -845,7 +860,8 @@ button {
   .checkbox__label {
     font-weight: 400;
     font-size: 16px;
-    line-height: 23px;
+    line-height: 142%;
+    letter-spacing: 0;
   }
 }
 .checkbox__link {
