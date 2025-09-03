@@ -119,12 +119,13 @@ h1 {
   font-weight: 700;
   // font-size: 96px;
   font-size: fluid-value(34, 96, 360, 1024);
-  line-height: 105px;
+  // line-height: 105px;
+  line-height: fluid-value(38, 105, 360, 1024);
   letter-spacing: 0.02em;
 
   @include mobile() {
     // font-size: 34px;
-    line-height: 38px;
+    // line-height: 38px;
   }
 }
 

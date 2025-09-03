@@ -85,9 +85,14 @@ const dateEndText = document.getElementById('date-end-text');
 
 dateStart.min = minDate;
 dateEnd.min = minDate;
+let lastClick = 0;
 
 dateStartText.addEventListener('click', () => {
-  dateStart.showPicker();
+  const now = Date.now();
+  if (now - lastClick > 300) {
+    dateStart.showPicker();
+  }
+  lastClick = now;
 });
 
 dateStart.addEventListener('change', (e) => {
@@ -98,7 +103,11 @@ dateStart.addEventListener('change', (e) => {
 
 
 dateEndText.addEventListener('click', () => {
-  dateEnd.showPicker();
+  const now = Date.now();
+  if (now - lastClick > 300) {
+    dateEnd.showPicker();
+  }
+  lastClick = now;
 });
 
 dateEnd.addEventListener('change', (e) => {
