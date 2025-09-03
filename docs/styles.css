@@ -661,8 +661,8 @@ button {
   }
 }
 .form__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   column-gap: 30px;
   row-gap: 33px;
 }
@@ -673,7 +673,6 @@ button {
 }
 @media (max-width: 970px) {
   .form__grid {
-    grid-template-columns: 1fr;
     row-gap: 30px;
   }
 }
@@ -697,6 +696,13 @@ button {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1 1 40%;
+  min-width: 310px;
+}
+@media (max-width: 970px) {
+  .field {
+    min-width: 278px;
+  }
 }
 .field__input {
   padding: 19px;

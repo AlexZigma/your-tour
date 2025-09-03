@@ -20,8 +20,9 @@
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    // grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 33px;
 
@@ -30,7 +31,7 @@
     }
 
     @include mobile {
-      grid-template-columns: 1fr;
+      // grid-template-columns: 1fr;
       row-gap: 30px;
     }
   }
@@ -61,6 +62,12 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1 1 40%;
+  min-width: 310px;
+
+  @include mobile {
+    min-width: 278px;
+  }
 
   &__input {
     padding: 19px;
