@@ -1,0 +1,29 @@
+@use 'mixins' as *;
+
+.tour-grid {
+  display: flex;
+  justify-content: center;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}

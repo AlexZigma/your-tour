@@ -3528,9 +3528,9 @@
       var headerFixed = document.getElementById("header-fixed");
       window.addEventListener("scroll", () => {
         if (window.scrollY > 450) {
-          headerFixed.classList.add("header-fixed--show");
+          headerFixed.classList.add("header--show");
         } else {
-          headerFixed.classList.remove("header-fixed--show");
+          headerFixed.classList.remove("header--show");
         }
       });
       var filterButtons = document.querySelectorAll(".link--filter");

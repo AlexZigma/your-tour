@@ -1,0 +1,65 @@
+@use 'mixins' as *;
+
+.photo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include mobile {
+    gap: 18px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+    // height: 301px;
+    align-items: center;
+
+    @include tablet {
+      column-gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+      column-gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--18 {
+      @include mobile {
+        column-gap: 18px;
+      }
+    }
+
+    &--center {
+      grid-template-columns: repeat(5, 1fr);
+
+
+      @include tablet {
+        // column-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @include mobile {
+        // column-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  &__img {
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center;
+    height: 301px;
+    width: 100%;
+
+    @include mobile {
+      border-radius: 20px;
+      // height: 110px;
+      max-height: fluid-value(110, 301, 360, 1024);
+    }
+
+  }
+}

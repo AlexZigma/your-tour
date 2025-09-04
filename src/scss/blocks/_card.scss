@@ -6,7 +6,7 @@
   justify-content: space-between;
 
   position: relative;
-  height: 531px;
+  min-height: 531px;
   // max-width: 370px;
 
   border-radius: 50px;
@@ -22,8 +22,9 @@
   @include mobile {
     // max-height: 318px;
     // max-width: 318px;
+    // min-height: auto;
     max-width: fluid-value(318, 450, 360, 1024);
-    max-height: fluid-value(318, 450, 360, 1024);
+    min-height: fluid-value(318, 450, 360, 1024);
     // aspect-ratio: 1;
     border-radius: 20px;
     padding: 25px;
@@ -149,13 +150,15 @@
   }
 
   &--big {
-    height: 567px;
+    min-height: 567px;
+    max-height: none;
+    // height: none;
     max-width: 1170px;
     padding: 60px;
 
     @include mobile {
       padding: 30px;
-      max-height: 455px;
+      min-height: 455px;
     }
 
     &::before {

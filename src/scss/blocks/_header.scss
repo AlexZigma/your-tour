@@ -2,29 +2,44 @@
 
 .header {
 
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
-    url(images/header-background.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
-  color: var(--white);
+  &-bg {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+      url(images/header-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--white);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: content-box;
+    height: 88px;
+    max-width: 1168px;
+    // padding-inline: 57px;
+    padding-inline: fluid-value(20, 57, 360, 1024);
+    margin-inline: auto;
+  }
 
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 88px;
-    max-width: fluid-value(910, 1168, 1024, 1260);
-    margin-inline: auto;
+    // margin-inline: 20px;
+    // width: 100%;
+    // flex: 1;
 
-    @include tablet {
-    }
-    
+    @include tablet {}
+
     @include mobile {
       max-width: fluid-value(320, 910, 360, 1024);
       // padding: 20px;
+      display: none;
     }
   }
 
@@ -48,15 +63,12 @@
     @include tablet {
       gap: 30px;
     }
-
-    @include mobile() {
-      display: none;
-    }
   }
 
-  &-fixed {
+  &--fixed {
     position: fixed;
     width: 100%;
+    max-width: none;
     top: -100px;
     background: rgba(243, 239, 232, 0.6);
     backdrop-filter: blur(27px);
@@ -72,57 +84,9 @@
       background-color: var(--black);
     }
 
-    &--show {
-      top: 0;
-    }
   }
 
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 50px;
-  align-items: center;
-  text-align: center;
-  height: 742px;
-
-  @include tablet {
-    height: fluid-value(400, 743);
-  }
-
-  @include mobile {
-    gap: 40px;
-    // height: 400px;
-  }
-
-  &__subtitle {
-    max-width: 562px;
-
-    @include tablet {
-      max-width: 400px;
-    }
-
-    @include mobile() {
-      max-width: 310px;
-    }
-  }
-
-  &__button {
-    padding: 5px 20px;
-    background-color: var(--white);
-    border-radius: 10px;
-    color: var(--black);
-
-    &:hover {
-      background-color: var(--orange-200);
-      color: var(--white);
-    }
-
-    &:active {
-      background-color: var(--orange-100);
-      color: var(--black);
-    }
+  &--show {
+    top: 0;
   }
 }

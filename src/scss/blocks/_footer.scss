@@ -12,13 +12,19 @@
   }
 
   &__content {
-    width: 1168px;
+    // width: 1168px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    box-sizing: content-box;
+    width: 1168px;
+    padding-inline: fluid-value(21, 53, 360, 1024);
+    margin-inline: auto;
 
     @include tablet {
-      width: 918px;
+      // width: 918px;
     }
 
     @include mobile {

@@ -1,0 +1,49 @@
+@use 'mixins' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+  height: 742px;
+
+  @include tablet {
+    height: fluid-value(400, 743);
+  }
+
+  @include mobile {
+    gap: 40px;
+    // height: 400px;
+  }
+
+  &__subtitle {
+    max-width: 562px;
+
+    @include tablet {
+      max-width: 400px;
+    }
+
+    @include mobile() {
+      max-width: 310px;
+    }
+  }
+
+  &__button {
+    padding: 5px 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    color: var(--black);
+
+    &:hover {
+      background-color: var(--orange-200);
+      color: var(--white);
+    }
+
+    &:active {
+      background-color: var(--orange-100);
+      color: var(--black);
+    }
+  }
+}

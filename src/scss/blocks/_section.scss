@@ -1,11 +1,11 @@
 @use 'mixins' as *;
 
 .section {
-  // max-width: 1170px;
-  margin-inline: auto;
-  // padding-inline: 23px;
-  max-width: fluid-value(918, 1170, 1024, 1240);
+  box-sizing: content-box;
+  max-width: 1170px;
+  padding-inline: fluid-value(21, 53, 360, 1024);
   scroll-margin-top: 88px;
+  margin-inline: auto;
   margin-block: fluid-value(75, 135, 360, 1024);
 
   @include tablet {
@@ -14,7 +14,7 @@
   
   @include mobile {
     // max-width: 318px;
-    max-width: fluid-value(318, 918, 360, 1024);
+    // max-width: fluid-value(318, 918, 360, 1024);
     // padding-inline: 21px;
   }
 
@@ -58,97 +58,9 @@
   }
 }
 
-.tour-grid {
-  display: flex;
-  justify-content: center;
-
-  @include mobile {
-    margin-top: 50px;
-  }
-
-  &__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-    @include tablet {
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    @include mobile {
-      grid-template-columns: 1fr;
-    }
-  }
-
-}
-
-.photo-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-
-  @include mobile {
-    gap: 18px;
-  }
-
-  &__row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 30px;
-    // height: 301px;
-    align-items: center;
-
-    @include tablet {
-      column-gap: 20px;
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @include mobile {
-      column-gap: 10px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    &--18 {
-      @include mobile {
-        column-gap: 18px;
-      }
-    }
-
-    &--center {
-      grid-template-columns: repeat(5, 1fr);
 
 
-      @include tablet {
-        // column-gap: 20px;
-        grid-template-columns: repeat(4, 1fr);
-      }
 
-      @include mobile {
-        // column-gap: 10px;
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-  }
-
-  &__img {
-    border-radius: 50px;
-    object-fit: cover;
-    object-position: center;
-    height: 301px;
-    width: 100%;
-
-    @include mobile {
-      border-radius: 20px;
-      // height: 110px;
-      max-height: fluid-value(110, 301, 360, 1024);
-    }
-
-  }
-}
 
 
 
