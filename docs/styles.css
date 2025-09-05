@@ -45,6 +45,7 @@ body {
   background-color: var(--beige-100);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-anchor: none;
 }
 
 a,
