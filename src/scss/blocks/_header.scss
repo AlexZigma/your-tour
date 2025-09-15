@@ -1,17 +1,9 @@
 @use 'mixins' as *;
 
 .header {
-
-
-  &-bg {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
-      url(images/header-background.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: var(--white);
-  }
+  // position: absolute;
+  // width: 100%;
+  color: var(--white);
 
   &__content {
     display: flex;
@@ -21,7 +13,6 @@
     box-sizing: content-box;
     height: 88px;
     max-width: 1168px;
-    // padding-inline: 57px;
     padding-inline: fluid-value(20, 57, 360, 1024);
     margin-inline: auto;
   }
@@ -30,15 +21,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // margin-inline: 20px;
-    // width: 100%;
-    // flex: 1;
 
     @include tablet {}
 
     @include mobile {
       max-width: fluid-value(320, 910, 360, 1024);
-      // padding: 20px;
       display: none;
     }
   }

@@ -7,16 +7,23 @@
   gap: 50px;
   align-items: center;
   text-align: center;
-  height: 742px;
+  min-height: 742px;
+  height: 100vh;
+  margin-top: -88px;
+  padding-top: 88px;
 
-  @include tablet {
-    height: fluid-value(400, 743);
-  }
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%),
+    url(images/header-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
 
   @include mobile {
     gap: 40px;
-    // height: 400px;
   }
+
 
   &__subtitle {
     max-width: 562px;
