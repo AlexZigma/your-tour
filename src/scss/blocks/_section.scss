@@ -8,16 +8,6 @@
   margin-inline: auto;
   margin-block: fluid-value(75, 135, 360, 1024);
 
-  @include tablet {
-    // max-width: 918px;
-  }
-  
-  @include mobile {
-    // max-width: 318px;
-    // max-width: fluid-value(318, 918, 360, 1024);
-    // padding-inline: 21px;
-  }
-
   &__title {
     text-align: center;
   }

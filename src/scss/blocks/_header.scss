@@ -1,8 +1,6 @@
 @use 'mixins' as *;
 
 .header {
-  // position: absolute;
-  // width: 100%;
   color: var(--white);
 
   &__content {

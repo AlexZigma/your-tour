@@ -105,6 +105,7 @@ h1 {
   line-height: clamp(38px, 38px + 67 * (100vw - 360px) / 664, 105px);
   letter-spacing: 0.02em;
 }
+
 h2 {
   font-style: normal;
   font-weight: 700;
@@ -205,22 +206,6 @@ input, button, textarea, select {
 /* 8. Avoid text overflows */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
-}
-
-/* 9. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-
-/*
-  10. Create a root stacking context
-*/
-#root, #__next {
-  isolation: isolate;
 }
 
 a {
@@ -484,7 +469,6 @@ button {
 .card--big::before {
   content: "";
   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0.01%, rgba(0, 0, 0, 0.2) 100%);
-  /* gradient bg */
   position: absolute;
   inset: 0;
   z-index: -1;
@@ -1045,6 +1029,7 @@ button {
 .cta__subtitle {
   color: var(--gray-300);
 }
+
 .story__list {
   display: flex;
   flex-direction: column;

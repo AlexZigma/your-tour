@@ -13,7 +13,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
-    // height: 301px;
     align-items: center;
 
     @include tablet {
@@ -37,12 +36,10 @@
 
 
       @include tablet {
-        // column-gap: 20px;
         grid-template-columns: repeat(4, 1fr);
       }
 
       @include mobile {
-        // column-gap: 10px;
         grid-template-columns: repeat(3, 1fr);
       }
     }
@@ -57,7 +54,6 @@
 
     @include mobile {
       border-radius: 20px;
-      // height: 110px;
       max-height: fluid-value(110, 301, 360, 1024);
     }
 

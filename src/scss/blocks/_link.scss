@@ -4,7 +4,6 @@
   position: relative;
   display: block;
 
-  // height: 100%;
   &::after {
     content: '';
     position: absolute;
@@ -71,12 +70,14 @@
     &::after {
       height: 2px;
     }
+
     &:hover::after {
       background-color: var(--black);
     }
 
     &.link--selected {
       color: var(--orange-200);
+
       &::after {
         width: 100%;
         background-color: var(--orange-200);
@@ -89,9 +90,6 @@
   }
 
   &--social {
-    // &:hover::after {
-    //   background-color: var(--black);
-    // }
 
     &:active {
       color: var(--orange-200);
@@ -106,7 +104,6 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    // position: relative;
 
     @include mobile {
       gap: 5px;

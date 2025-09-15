@@ -12,7 +12,6 @@
   }
 
   &__content {
-    // width: 1168px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,10 +21,6 @@
     width: 1168px;
     padding-inline: fluid-value(21, 53, 360, 1024);
     margin-inline: auto;
-
-    @include tablet {
-      // width: 918px;
-    }
 
     @include mobile {
       flex-direction: column;
@@ -55,10 +50,6 @@
 
   &__social-icon {
     height: 26px;
-
-    @include mobile {
-      // width: 22px;
-    }
   }
 
   &__social-link {
@@ -69,10 +60,6 @@
 
     @include mobile {
       gap: 5px;
-    }
-
-    &:hover {
-      // text-decoration: underline solid var(--black) 1px;
     }
 
     &:active {

@@ -21,7 +21,6 @@
 
   &__grid {
     display: flex;
-    // grid-template-columns: 1fr 1fr;
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 33px;
@@ -31,7 +30,6 @@
     }
 
     @include mobile {
-      // grid-template-columns: 1fr;
       row-gap: 30px;
     }
   }
@@ -44,12 +42,6 @@
       gap: 10px;
     }
   }
-
-  // &__button {
-  //   @include mobile {
-  //     width: 134px;
-  //   }
-  // }
 }
 
 .form-bg {
@@ -71,7 +63,6 @@
 
   &__input {
     padding: 19px;
-    // box-sizing: content-box;
     border: 1px solid var(--beige-200);
     border-radius: 10px;
     background-color: var(--beige-100);
@@ -118,7 +109,6 @@
       position: absolute;
       inset: 0;
       z-index: -10;
-      // opacity: 0;
     }
 
     &--area {
