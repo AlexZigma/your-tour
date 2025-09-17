@@ -4,7 +4,7 @@ import IMask from 'imask';
 
 const headerFixed = document.querySelector('header');
 window.addEventListener('scroll', () => {
-  const posBegin = window.scrollY > 300
+  const posBegin = window.scrollY > 100
   const posAfter = window.scrollY > 450
   headerFixed.classList.toggle('header--fixed', posBegin);
   headerFixed.classList.toggle('header--show', posAfter);
@@ -25,11 +25,11 @@ const phoneMaskOption = {
 };
 const phoneMask = IMask(phoneInput, phoneMaskOption);
 
-let date = new Date();
+let currentDate = new Date();
 
-const yyyy = date.getFullYear();
-const mm = String(date.getMonth() + 1).padStart(2, '0');
-const dd = String(date.getDate()).padStart(2, '0');
+const yyyy = currentDate.getFullYear();
+const mm = String(currentDate.getMonth() + 1).padStart(2, '0');
+const dd = String(currentDate.getDate()).padStart(2, '0');
 const minDate = `${yyyy}-${mm}-${dd}`;
 
 const dateStart = document.getElementById('date-start');
@@ -41,32 +41,26 @@ dateStart.min = minDate;
 dateEnd.min = minDate;
 let lastClick = 0;
 
-dateStartText.addEventListener('click', () => {
+const onDateInputClick = () => {
   const now = Date.now();
   if (now - lastClick > 300) {
     dateStart.showPicker();
   }
   lastClick = now;
-});
+}
+
+dateStartText.addEventListener('click', onDateInputClick);
+dateEndText.addEventListener('click', onDateInputClick);
 
 dateStart.addEventListener('change', (e) => {
-  date = e.target.value.split('-');
-  dateStartText.value = [date[2], date[1], date[0]].join('.');
+  const dateParts = e.target.value.split('-');
+  dateStartText.value = [dateParts[2], dateParts[1], dateParts[0]].join('.');
   dateEnd.min = e.target.value;
 });
 
-
-dateEndText.addEventListener('click', () => {
-  const now = Date.now();
-  if (now - lastClick > 300) {
-    dateEnd.showPicker();
-  }
-  lastClick = now;
-});
-
 dateEnd.addEventListener('change', (e) => {
-  date = e.target.value.split('-');
-  dateEndText.value = [date[2], date[1], date[0]].join('.');
+  const dateParts = e.target.value.split('-');
+  dateEndText.value = [dateParts[2], dateParts[1], dateParts[0]].join('.');
 });
 
 
