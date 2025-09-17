@@ -41,16 +41,16 @@ dateStart.min = minDate;
 dateEnd.min = minDate;
 let lastClick = 0;
 
-const onDateInputClick = () => {
+const onDateInputClick = (dateInput) => {
   const now = Date.now();
   if (now - lastClick > 300) {
-    dateStart.showPicker();
+    dateInput.showPicker();
   }
   lastClick = now;
 }
 
-dateStartText.addEventListener('click', onDateInputClick);
-dateEndText.addEventListener('click', onDateInputClick);
+dateStartText.addEventListener('click', () => onDateInputClick(dateStart));
+dateEndText.addEventListener('click', () => onDateInputClick(dateEnd));
 
 dateStart.addEventListener('change', (e) => {
   const dateParts = e.target.value.split('-');

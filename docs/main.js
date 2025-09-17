@@ -3556,15 +3556,15 @@
       dateStart.min = minDate;
       dateEnd.min = minDate;
       var lastClick = 0;
-      var onDateInputClick = () => {
+      var onDateInputClick = (dateInput) => {
         const now = Date.now();
         if (now - lastClick > 300) {
-          dateStart.showPicker();
+          dateInput.showPicker();
         }
         lastClick = now;
       };
-      dateStartText.addEventListener("click", onDateInputClick);
-      dateEndText.addEventListener("click", onDateInputClick);
+      dateStartText.addEventListener("click", () => onDateInputClick(dateStart));
+      dateEndText.addEventListener("click", () => onDateInputClick(dateEnd));
       dateStart.addEventListener("change", (e) => {
         const dateParts = e.target.value.split("-");
         dateStartText.value = [dateParts[2], dateParts[1], dateParts[0]].join(".");
