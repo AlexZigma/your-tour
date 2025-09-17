@@ -3525,13 +3525,12 @@
   var require_main = __commonJS({
     "src/main.js"() {
       init_esm();
-      var headerFixed = document.getElementById("header-fixed");
+      var headerFixed = document.querySelector("header");
       window.addEventListener("scroll", () => {
-        if (window.scrollY > 450) {
-          headerFixed.classList.add("header--show");
-        } else {
-          headerFixed.classList.remove("header--show");
-        }
+        const posBegin = window.scrollY > 100;
+        const posAfter = window.scrollY > 450;
+        headerFixed.classList.toggle("header--fixed", posBegin);
+        headerFixed.classList.toggle("header--show", posAfter);
       });
       var filterButtons = document.querySelectorAll(".link--filter");
       for (let button of filterButtons) {

@@ -267,6 +267,8 @@ button {
 }
 
 .header {
+  position: absolute;
+  width: 100%;
   color: var(--white);
 }
 .header__content {
@@ -313,13 +315,12 @@ button {
 }
 .header--fixed {
   position: fixed;
-  width: 100%;
-  max-width: none;
-  top: -100px;
+  color: var(--black);
   background: rgba(243, 239, 232, 0.6);
   backdrop-filter: blur(27px);
   z-index: 10;
-  transition-duration: 300ms;
+  top: -100px;
+  transition: top 300ms;
 }
 .header--fixed .header__logo {
   filter: brightness(0) saturate(100%);
@@ -769,6 +770,7 @@ button {
   bottom: 0;
   left: 50%;
   translate: -50%;
+  color: inherit;
   background-color: var(--white);
   width: 0;
   height: 2px;
@@ -1140,7 +1142,6 @@ button {
   text-align: center;
   min-height: 742px;
   height: 100vh;
-  margin-top: -88px;
   padding-top: 88px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), url(images/header-background.png);
   background-position: center;
@@ -1150,6 +1151,7 @@ button {
 }
 @media (max-width: 910px) {
   .hero {
+    min-height: 488px;
     gap: 40px;
   }
 }

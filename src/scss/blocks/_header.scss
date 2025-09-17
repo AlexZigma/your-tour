@@ -1,6 +1,8 @@
 @use 'mixins' as *;
 
 .header {
+  position: absolute;
+  width: 100%;
   color: var(--white);
 
   &__content {
@@ -19,8 +21,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @include tablet {}
 
     @include mobile {
       max-width: fluid-value(320, 910, 360, 1024);
@@ -52,13 +52,12 @@
 
   &--fixed {
     position: fixed;
-    width: 100%;
-    max-width: none;
-    top: -100px;
+    color: var(--black);
     background: rgba(243, 239, 232, 0.6);
     backdrop-filter: blur(27px);
     z-index: 10;
-    transition-duration: 300ms;
+    top: -100px;
+    transition: top 300ms;
 
     & .header__logo {
       filter: brightness(0) saturate(100%);
