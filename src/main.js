@@ -2,7 +2,7 @@
 
 import IMask from 'imask';
 
-const headerFixed = document.querySelector('header');
+const headerFixed = document.getElementById('header');
 window.addEventListener('scroll', () => {
   const posBegin = window.scrollY > 100
   const posAfter = window.scrollY > 450
@@ -18,7 +18,7 @@ for (let button of filterButtons) {
   })
 }
 
-const phoneInput = document.getElementById('phone');
+const phoneInput = document.getElementById('phoneInput');
 
 const phoneMaskOption = {
   mask: '+{7}(000)000-00-00'

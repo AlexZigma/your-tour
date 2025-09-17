@@ -3525,7 +3525,7 @@
   var require_main = __commonJS({
     "src/main.js"() {
       init_esm();
-      var headerFixed = document.querySelector("header");
+      var headerFixed = document.getElementById("header");
       window.addEventListener("scroll", () => {
         const posBegin = window.scrollY > 100;
         const posAfter = window.scrollY > 450;
@@ -3539,7 +3539,7 @@
           button.classList.add("link--selected");
         });
       }
-      var phoneInput = document.getElementById("phone");
+      var phoneInput = document.getElementById("phoneInput");
       var phoneMaskOption = {
         mask: "+{7}(000)000-00-00"
       };
