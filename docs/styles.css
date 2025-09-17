@@ -367,7 +367,6 @@ button {
 }
 @media (max-width: 910px) {
   .card {
-    max-width: clamp(318px, 318px + 132 * (100vw - 360px) / 664, 450px);
     min-height: clamp(318px, 318px + 132 * (100vw - 360px) / 664, 450px);
     border-radius: 20px;
     padding: 25px;

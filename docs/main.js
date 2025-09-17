@@ -3527,7 +3527,7 @@
       init_esm();
       var headerFixed = document.querySelector("header");
       window.addEventListener("scroll", () => {
-        const posBegin = window.scrollY > 100;
+        const posBegin = window.scrollY > 300;
         const posAfter = window.scrollY > 450;
         headerFixed.classList.toggle("header--fixed", posBegin);
         headerFixed.classList.toggle("header--show", posAfter);

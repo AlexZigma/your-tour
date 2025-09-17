@@ -14,10 +14,7 @@
   padding: 50px;
   margin: 0 auto;
 
-  @include tablet {}
-
   @include mobile {
-    max-width: fluid-value(318, 450, 360, 1024);
     min-height: fluid-value(318, 450, 360, 1024);
     border-radius: 20px;
     padding: 25px;
