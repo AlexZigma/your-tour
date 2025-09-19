@@ -7,7 +7,7 @@
   gap: 50px;
   align-items: center;
   text-align: center;
-  min-height: 742px;
+  min-height: fluid-value(488, 830, 360, 1024);
   height: 100vh;
   padding-top: 88px;
 
@@ -20,7 +20,6 @@
   color: var(--white);
 
   @include mobile {
-    min-height: 488px;
     gap: 40px;
   }
 

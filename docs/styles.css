@@ -1139,7 +1139,7 @@ button {
   gap: 50px;
   align-items: center;
   text-align: center;
-  min-height: 742px;
+  min-height: clamp(488px, 488px + 342 * (100vw - 360px) / 664, 830px);
   height: 100vh;
   padding-top: 88px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 39.9%), url(images/header-background.png);
@@ -1150,7 +1150,6 @@ button {
 }
 @media (max-width: 910px) {
   .hero {
-    min-height: 488px;
     gap: 40px;
   }
 }
